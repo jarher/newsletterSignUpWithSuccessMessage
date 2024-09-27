@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+  <main>
+    <div class="newsletter__container">
+      <picture class="newsletter__main-image--container">
+        <source media="(max-width: 799px)" srcset="./assets/images/illustration-sign-up-mobile.svg" />
+        <source media="(min-width: 800px)" srcset="./assets/images/illustration-sign-up-desktop.svg" />
+        <img src="./assets/images/illustration-sign-up-desktop.svg" alt="illustration sign up" />
+      </picture>
+      <div class="newsletter__main-content">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li><img src="./assets/images/icon-list.svg" alt="icon list"> Product discovery and building what matters</li>
+          <li><img src="./assets/images/icon-list.svg" alt="icon list"> Measuring to ensure updates are a success</li>
+          <li><img src="./assets/images/icon-list.svg" alt="icon list"> And much more!</li>
+        </ul>
+        <form novalidate>
+          <div class="form-wrapper">
+            <label for="emailForm">Email address</label> <span class="form-wrapper-error"></span>
+            <input type="email" name="emailForm" id="emailForm" placeholder="email@company.com" autocomplete="email">
+          </div>
+          <button type="submit">Subscribe to monthly newsletter
+          </button>
+        </form>
+        <!-- Sign-up form end -->
+      </div>
+    </div>
+    <!-- Success message start -->
+    <div class="newsletter__message-notification--container">
+
+      <img class="newsletter__message-notification--icon" src="./assets/images/icon-success.svg" alt="icon success">
+
+      <div class="newsletter__message-notification--title">
+        Thanks for subscribing!
+      </div>
+
+      <div class="newsletter__message-notification--paragraph">
+        A confirmation email has been sent to <b>ash@loremcompany.com.</b>
+        Please open it and click the button inside to confirm your subscription.
+      </div>
+
+      <button class="newsletter__message-notification--button">Dismiss message
+      </button>
+    </div>
+    <!-- Success message end -->
+  </main>
+  <script src="./assets/js/main.js" type="module"></script>
+</body>
+
+</html>
