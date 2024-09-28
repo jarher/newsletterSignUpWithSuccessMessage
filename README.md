@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/newsletter-signup-form-with-success-message-html-css-js-sYk1cBxxo2]
 - Live Site URL: [https://jarher.github.io/newsletterSignUpWithSuccessMessage/]
 
 ## My process
