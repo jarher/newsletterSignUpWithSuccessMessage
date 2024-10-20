@@ -1,19 +1,11 @@
-import { formValidation } from "./formComponent/mainComponent/myForm.js";
+import validate from "./formValidator.js";
 import { buttonHandler } from "./utils/buttonEvent.js";
 import elementsHtml from "./utils/elementsHtml.js";
 import { containersTransitions } from "./utils/transition.js";
 
+const { formValidation, resetValues } = validate;
 //assign event to an html element.
-const formEvents = [
-  {
-    eventType: "submit",
-    element: document.querySelector("form"),
-  },
-  {
-    eventType: "blur",
-    element: Array.from(document.querySelectorAll("input")),
-  },
-];
+const formEvents = ["submit", "blur"];
 
 formValidation({
   initialValues: {
@@ -23,19 +15,20 @@ formValidation({
     emailForm: {
       type: "email",
       errors: {
-        email: "Valid email required",
+        message: "Valid email required",
         required: "this field is required",
       },
     },
   },
   formEvents,
-  errorOutputSelector: ".form-wrapper-error",
-  formControlAttribute: "form-wrapper-invalid",
+  errorOutputClass: "form-wrapper-error",
+  formControlClass: "form-wrapper-invalid",
   onSubmit: () => {
     containersTransitions(
       elementsHtml.newsletter__container,
       elementsHtml.newsletter__message__container
     );
+    resetValues();
   },
 });
 
